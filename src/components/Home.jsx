@@ -3,6 +3,7 @@ import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { Link } from 'react-scroll';
 import Typed from 'typed.js';
 import React from 'react';
+
 const Home = () => {
   // Create reference to store the DOM element containing the animation
   const el = React.useRef(null);
@@ -13,8 +14,8 @@ const Home = () => {
     const options = {
       strings: [
         `Hey ! I'm a <span style="color:#19A3E0;text-decoration-line: underline;">Phan Minh Tri</span>`,
-        `I'm a <span style="color:#19A3E0;text-decoration-line: underline;">Frontend Developer</span>`,
         `I'm a <span style="color:#19A3E0;text-decoration-line: underline;">Backend Developer</span>`,
+        `I'm a <span style="color:#19A3E0;text-decoration-line: underline;">Frontend Developer</span>`,
       ],
       typeSpeed: 50,
       backSpeed: 50,
@@ -37,10 +38,10 @@ const Home = () => {
       <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row'>
         <div className='flex flex-col justify-center h-full flex-[2] ml-2'>
           <h2 className='text-4xl sm:text-7xl text-white font-bold' ref={el} />
-          <p className='text-gray-500 py-2 max-w-md'>
-            I have 8 years of experience building and designing software.
-            Currently, I love to work on web application using technologies like
-            React, Tailwind, Nodejs, Express and Mongoose
+          <p className='text-gray-400 py-2 max-w-md '>
+            I have learned 4 years of experience building and designing
+            software. Currently, I love to work on web application using
+            technologies like React, Tailwind, Nodejs, Express and Mongoose
           </p>
 
           <div>

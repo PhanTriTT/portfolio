@@ -23,29 +23,31 @@ const About = () => {
           <div className='flex-1 flex flex-col items-start ml-2'>
             <h3 className='font-bold text-4xl sm:text-7xl'>About me</h3>
             <p className='text-xl text-gray-500 mt-4'>
-              A small river named Duden flows by their place and supplies it
-              with the necessary regelialia.
+              I am from a province in the southwest of Vietnam. Currently living
+              and studying in Ho Chi Minh City.
             </p>
             <div className='mt-8 flex flex-col gap-4'>
-              <p className='text-xl w-full'>
-                <span className='w-2/3'>Name : </span>
-                <span>Phan Minh Tri</span>
+              <p className='text-xl w-full flex'>
+                <span className='flex-1'>Name : </span>
+                <span className='flex-1'>Phan Minh Tri</span>
               </p>
-              <p className='text-xl w-full'>
-                <span className='w-2/3'>Date of birth : </span>
-                <span>02/1/2001</span>
+              <p className='text-xl w-full flex'>
+                <span className='flex-1'>Date of birth : </span>
+                <span className='flex-1'>02/1/2001</span>
               </p>
-              <p className='text-xl w-full'>
-                <span className='w-2/3'>Address : </span>
-                <span>247/33/93 Lac Long Quan,P3,Q11,HCM</span>
+              <p className='text-xl w-full flex'>
+                <span className='flex-1'>Address : </span>
+                <span className='flex-1'>
+                  247/33/93 Lac Long Quan,P3,Q11,HCM
+                </span>
               </p>
-              <p className='text-xl w-full'>
-                <span className='w-2/3'>Email : </span>
-                <span>minhtritt01@gmail.com</span>
+              <p className='text-xl w-full flex'>
+                <span className='flex-1'>Email : </span>
+                <span className='flex-1'>minhtritt01@gmail.com</span>
               </p>
-              <p className='text-xl w-full'>
-                <span className='w-2/3'>Phone : </span>
-                <span>0834790997</span>
+              <p className='text-xl w-full flex'>
+                <span className='flex-1'>Phone : </span>
+                <span className='flex-1'>0834790997</span>
               </p>
               <form method='get' action='./resume.pdf'>
                 <button className='bg-blue-600 mt-4 py-3 px-6 text-lg cursor-pointer rounded-full'>

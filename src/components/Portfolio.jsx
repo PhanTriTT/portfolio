@@ -69,13 +69,13 @@ const Portfolio = () => {
               />
               <div className='flex items-center justify-center'>
                 <button
-                  className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'
+                  className='w-1/2 px-3 py-2 m-4 duration-200  hover:scale-105 hover:bg-gray-300 hover:text-black hover:rounded-lg'
                   onClick={() => window.open(demo, '_blank')}
                 >
                   Demo
                 </button>
                 <button
-                  className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'
+                  className='w-1/2 px-3 py-2 m-4 duration-300 hover:scale-105 hover:bg-gray-300 hover:text-black hover:rounded-lg'
                   onClick={() => window.open(code, '_blank')}
                 >
                   Code

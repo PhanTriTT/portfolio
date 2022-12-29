@@ -2,10 +2,15 @@ import html from '../assets/html.png';
 import css from '../assets/css.png';
 import javascript from '../assets/javascript.png';
 import reactImage from '../assets/react.png';
-import nextjs from '../assets/nextjs.png';
-import graphql from '../assets/graphql.png';
+import node from '../assets/node.png';
+import reactquery from '../assets/react-query.png';
 import github from '../assets/github.png';
 import tailwind from '../assets/tailwind.png';
+import mongodb from '../assets/mongodb.png';
+import materialui from '../assets/material-ui.png';
+import formilk from '../assets/formilk.png';
+import axios from '../assets/axios.png';
+import redux from '../assets/redux.png';
 const Experience = () => {
   const techs = [
     { id: 1, src: html, title: 'HTML', style: 'shadow-orange-500' },
@@ -13,9 +18,13 @@ const Experience = () => {
     { id: 3, src: javascript, title: 'JavaScript', style: 'shadow-yellow-500' },
     { id: 4, src: reactImage, title: 'React', style: 'shadow-blue-600' },
     { id: 5, src: tailwind, title: 'Taiwind', style: 'shadow-sky-400' },
-    { id: 6, src: nextjs, title: 'Next JS', style: 'shadow-white' },
-    { id: 7, src: graphql, title: 'GraphQL', style: 'shadow-pink-400' },
+    { id: 6, src: node, title: 'Node JS', style: 'shadow-green-400' },
+    { id: 7, src: reactquery, title: 'React-Query', style: 'shadow-red-400' },
     { id: 8, src: github, title: 'GitHub', style: 'shadow-gray-400' },
+    { id: 9, src: mongodb, title: 'MongoDB', style: 'shadow-white' },
+    { id: 10, src: redux, title: 'Redux', style: 'shadow-purple-400' },
+    { id: 11, src: materialui, title: 'Material-UI', style: 'shadow-sky-700' },
+    { id: 12, src: formilk, title: 'Formilk', style: 'shadow-blue-500' },
   ];
   return (
     <div

@@ -1,13 +1,13 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { BsFillPersonLinesFill, BsFacebook } from 'react-icons/bs';
 const SocialLinks = () => {
   const links = [
     {
       id: 1,
       child: (
         <>
-          LinkedIn <FaLinkedin size={30} />
+          LinkedIn <FaLinkedin size={25} />
         </>
       ),
       href: 'https://www.linkedin.com/in/minhtritt01/',
@@ -17,7 +17,7 @@ const SocialLinks = () => {
       id: 2,
       child: (
         <>
-          GitHub <FaGithub size={30} />
+          GitHub <FaGithub size={25} />
         </>
       ),
       href: 'https://github.com/PhanTriTT',
@@ -27,17 +27,27 @@ const SocialLinks = () => {
       id: 3,
       child: (
         <>
-          Mail <HiOutlineMail size={30} />
+          Facebook <BsFacebook size={25} />
         </>
       ),
-      href: 'mailto:minhtritt01@gmail.com',
+      href: 'https://www.facebook.com/minhtritt01/',
       style: '',
     },
     {
       id: 4,
       child: (
         <>
-          Resume <BsFillPersonLinesFill size={30} />
+          Mail <HiOutlineMail size={25} />
+        </>
+      ),
+      href: 'mailto:minhtritt01@gmail.com',
+      style: '',
+    },
+    {
+      id: 5,
+      child: (
+        <>
+          Resume <BsFillPersonLinesFill size={25} />
         </>
       ),
       href: './resume.pdf',
