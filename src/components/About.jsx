@@ -47,9 +47,11 @@ const About = () => {
                 <span className='w-2/3'>Phone : </span>
                 <span>0834790997</span>
               </p>
-              <button className='bg-blue-600 mt-4 py-3 px-2 text-lg cursor-pointer rounded-full'>
-                DOWNLOADCV
-              </button>
+              <form method='get' action='./resume.pdf'>
+                <button className='bg-blue-600 mt-4 py-3 px-6 text-lg cursor-pointer rounded-full'>
+                  DOWNLOAD CV
+                </button>
+              </form>
             </div>
           </div>
         </div>
