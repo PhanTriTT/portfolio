@@ -11,7 +11,7 @@ const SocialLinks = () => {
         </>
       ),
       href: 'https://www.linkedin.com/in/minhtritt01/',
-      style: 'rounded-tr-md',
+      style: 'rounded-tr-md bg-blue-500',
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ const SocialLinks = () => {
         </>
       ),
       href: 'https://github.com/PhanTriTT',
-      style: '',
+      style: 'bg-black',
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ const SocialLinks = () => {
         </>
       ),
       href: 'https://www.facebook.com/minhtritt01/',
-      style: '',
+      style: 'bg-[#1095F4]',
     },
     {
       id: 4,
@@ -41,7 +41,7 @@ const SocialLinks = () => {
         </>
       ),
       href: 'mailto:minhtritt01@gmail.com',
-      style: '',
+      style: 'bg-green-300',
     },
     {
       id: 5,
@@ -51,7 +51,7 @@ const SocialLinks = () => {
         </>
       ),
       href: './resume.pdf',
-      style: 'rounded-br-md',
+      style: 'rounded-br-md bg-gray-500',
       download: true,
     },
   ];
@@ -61,7 +61,7 @@ const SocialLinks = () => {
         {links.map(({ id, child, href, style, download }) => (
           <li
             key={`link-social${id}`}
-            className={`flex justify-between items-center w-40 h-14 px-4 bg-gray-500 ml-[-100px] hover:rounded-md duration-300 hover:ml-[-10px] ${style}`}
+            className={`flex justify-between items-center w-40 h-14 px-4  ml-[-100px] hover:rounded-md duration-300 hover:ml-[-10px] ${style}`}
           >
             <a
               href={href}
