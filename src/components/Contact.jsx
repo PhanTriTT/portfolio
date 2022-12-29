@@ -1,4 +1,27 @@
+import { useFormik } from 'formik';
+import * as yup from 'yup';
+const validationSchema = yup.object({
+  name: yup
+    .string('Enter your name')
+    .required('Name is required! Please enter your name.'),
+  email: yup
+    .string('Enter your email')
+    .email('Enter a valid email!')
+    .required('Email is required!'),
+  message: yup
+    .string('Enter your name')
+    .required('Message is required! Please enter your message.'),
+});
 const Contact = () => {
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      name: '',
+      message: '',
+    },
+    validationSchema: validationSchema,
+  });
+
   return (
     <div
       name='contact'
@@ -19,26 +42,49 @@ const Contact = () => {
             className='flex flex-col w-full h-full'
           >
             <input
+              id='name'
               type='text'
               name='name'
-              placeholder='Enter your name'
-              className='p-2 bg-transparent border-2 rounded-md focus:outline-none text-white'
+              className='my-2 p-2 bg-transparent border-2 rounded-md focus:outline-none text-white'
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.name}
             />
+            {formik.touched.name && formik.errors.name ? (
+              <div className='p-2 text-red-600 rounded-md'>
+                {formik.errors.name}
+              </div>
+            ) : null}
             <input
               type='email'
               name='email'
-              placeholder='Enter your email address'
-              className='my-4 p-2 bg-transparent border-2 rounded-md focus:outline-none text-white'
+              className='my-2 p-2 bg-transparent border-2 rounded-md focus:outline-none text-white'
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.email}
             />
+            {formik.touched.email && formik.errors.email ? (
+              <div className='p-2 text-red-600 rounded-md'>
+                {formik.errors.email}
+              </div>
+            ) : null}
             <textarea
               name='message'
-              placeholder='Enter your message'
               rows='10'
-              className='p-2 bg-transparent border-2 rounded-md focus:outline-none '
+              className='p-2 bg-transparent border-2 rounded-md focus:outline-none my-2'
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.message}
             />
+            {formik.touched.message && formik.errors.message ? (
+              <div className='px-2 text-red-600 rounded-md'>
+                {formik.errors.message}
+              </div>
+            ) : null}
             <button
               type='submit'
-              className='text-white bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300'
+              className='text-white bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 my-7 mx-auto flex items-center rounded-md hover:scale-110 duration-300'
+              disabled={!formik.errors}
             >
               Let's talk
             </button>

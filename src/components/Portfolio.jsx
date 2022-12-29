@@ -1,34 +1,46 @@
-import arrayDestruct from '../assets/portfolio/arrayDestruct.jpg';
-import installNode from '../assets/portfolio/installNode.jpg';
-import navbar from '../assets/portfolio/navbar.jpg';
-import reactParallax from '../assets/portfolio/reactParallax.jpg';
-import reactSmooth from '../assets/portfolio/reactSmooth.jpg';
-import reactWeather from '../assets/portfolio/reactWeather.jpg';
+import dashboard from '../assets/portfolio/dashboard.png';
+import cloud from '../assets/portfolio/cloud.png';
+import web3 from '../assets/portfolio/web3.png';
+import spotify from '../assets/portfolio/spotify.png';
+import rmdb from '../assets/portfolio/rmdb.png';
+import netflix from '../assets/portfolio/netflix.png';
 const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
-      src: arrayDestruct,
+      src: dashboard,
+      demo: 'https://dashboard-shoppy-minhtri.netlify.app/',
+      code: 'https://github.com/PhanTriTT/dashboard-shoppy',
     },
     {
       id: 2,
-      src: installNode,
+      src: spotify,
+      demo: 'https://spotify-minhtri.netlify.app/',
+      code: 'https://github.com/PhanTriTT/spotify-clone',
     },
     {
       id: 3,
-      src: reactParallax,
+      src: netflix,
+      demo: 'https://netflix-minhtri.netlify.app/',
+      code: 'https://github.com/PhanTriTT/netflix-clone',
     },
     {
       id: 4,
-      src: reactSmooth,
+      src: web3,
+      demo: 'https://kcryptominhtri.000webhostapp.com/',
+      code: 'https://github.com/PhanTriTT/web3.0',
     },
     {
       id: 5,
-      src: navbar,
+      src: rmdb,
+      demo: 'https://react-rmdb-minhtri.netlify.app',
+      code: 'https://github.com/PhanTriTT/react-moviedb2021',
     },
     {
       id: 6,
-      src: arrayDestruct,
+      src: cloud,
+      demo: 'https://cloud-app-minhtri.netlify.app/',
+      code: 'https://github.com/PhanTriTT/cloud-app-react',
     },
   ];
   return (
@@ -45,21 +57,27 @@ const Portfolio = () => {
         </div>
 
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 '>
-          {portfolios.map(({ id, src }) => (
+          {portfolios.map(({ id, src, demo, code }) => (
             <div
               key={`portfolio-${id}`}
               className='shadow-md shadow-gray-600 rounded-lg'
             >
               <img
                 src={src}
-                alt=''
+                alt={'Image'}
                 className='rounded-md duration-200 hover:scale-105'
               />
               <div className='flex items-center justify-center'>
-                <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
+                <button
+                  className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'
+                  onClick={() => window.open(demo, '_blank')}
+                >
                   Demo
                 </button>
-                <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
+                <button
+                  className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'
+                  onClick={() => window.open(code, '_blank')}
+                >
                   Code
                 </button>
               </div>

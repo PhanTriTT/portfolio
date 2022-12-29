@@ -1,3 +1,4 @@
+import HeroImage from '../assets/heroImage.png';
 const About = () => {
   return (
     <div
@@ -10,23 +11,48 @@ const About = () => {
             About
           </p>
         </div>
+        <div className='flex flex-col md:flex-row justify-center items-center mt-2'>
+          <div className='flex-1 hidden md:block'>
+            <img
+              src={HeroImage}
+              alt='my profile'
+              className='rounded-2xl mx-auto w-2/3'
+            />
+          </div>
 
-        <p className='text-lg mt-20'>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur ab
-          corrupti voluptatem, dolorem minus pariatur ipsam rem iusto sed veniam
-          ut, placeat debitis voluptates nobis! Numquam est soluta placeat
-          laborum!
-        </p>
-        <br />
-
-        <p className='text-xl'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-          corrupti minima omnis modi, neque earum, dicta rerum ratione beatae
-          repellat, eligendi in quibusdam sapiente expedita quasi natus minus
-          cumque inventore excepturi accusamus? Alias voluptatum quia non sed
-          quasi perferendis nisi accusamus. Id illo dolor, aliquid repellat in
-          iste cupiditate aut?
-        </p>
+          <div className='flex-1 flex flex-col items-start ml-2'>
+            <h3 className='font-bold text-4xl sm:text-7xl'>About me</h3>
+            <p className='text-xl text-gray-500 mt-4'>
+              A small river named Duden flows by their place and supplies it
+              with the necessary regelialia.
+            </p>
+            <div className='mt-8 flex flex-col gap-4'>
+              <p className='text-xl w-full'>
+                <span className='w-2/3'>Name : </span>
+                <span>Phan Minh Tri</span>
+              </p>
+              <p className='text-xl w-full'>
+                <span className='w-2/3'>Date of birth : </span>
+                <span>02/1/2001</span>
+              </p>
+              <p className='text-xl w-full'>
+                <span className='w-2/3'>Address : </span>
+                <span>247/33/93 Lac Long Quan,P3,Q11,HCM</span>
+              </p>
+              <p className='text-xl w-full'>
+                <span className='w-2/3'>Email : </span>
+                <span>minhtritt01@gmail.com</span>
+              </p>
+              <p className='text-xl w-full'>
+                <span className='w-2/3'>Phone : </span>
+                <span>0834790997</span>
+              </p>
+              <button className='bg-blue-600 mt-4 py-3 px-2 text-lg cursor-pointer rounded-full'>
+                DOWNLOADCV
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

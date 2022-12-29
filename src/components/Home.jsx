@@ -1,17 +1,42 @@
 import HeroImage from '../assets/heroImage.png';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { Link } from 'react-scroll';
+import Typed from 'typed.js';
+import React from 'react';
 const Home = () => {
+  // Create reference to store the DOM element containing the animation
+  const el = React.useRef(null);
+  // Create reference to store the Typed instance itself
+  const typed = React.useRef(null);
+
+  React.useEffect(() => {
+    const options = {
+      strings: [
+        `Hey ! I'm a <span style="color:#19A3E0;text-decoration-line: underline;">Phan Minh Tri</span>`,
+        `I'm a <span style="color:#19A3E0;text-decoration-line: underline;">Frontend Developer</span>`,
+        `I'm a <span style="color:#19A3E0;text-decoration-line: underline;">Backend Developer</span>`,
+      ],
+      typeSpeed: 50,
+      backSpeed: 50,
+    };
+
+    // elRef refers to the <span> rendered below
+    typed.current = new Typed(el.current, options);
+
+    return () => {
+      // // Make sure to destroy Typed instance during cleanup
+      // // to prevent memory leaks
+      typed.current.destroy();
+    };
+  }, []);
   return (
     <div
       name='home'
       className='h-screen w-full bg-gradient-to-b from-black via-black to-gray-800'
     >
       <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row'>
-        <div className='flex flex-col justify-center h-full'>
-          <h2 className='text-4xl sm:text-7xl text-white font-bold'>
-            I'm a Full Stack Developer
-          </h2>
+        <div className='flex flex-col justify-center h-full flex-[2] ml-2'>
+          <h2 className='text-4xl sm:text-7xl text-white font-bold' ref={el} />
           <p className='text-gray-500 py-4 max-w-md'>
             I have 8 years of experience building and designing software.
             Currently, I love to work on web application using technologies like
@@ -29,7 +54,7 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        <div>
+        <div className='flex-1'>
           <img
             src={HeroImage}
             alt='my profile'
