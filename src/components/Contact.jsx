@@ -45,6 +45,7 @@ const Contact = () => {
               id='name'
               type='text'
               name='name'
+              placeholder='Enter your name'
               className='my-2 p-2 bg-transparent border-2 rounded-md focus:outline-none text-white'
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -58,6 +59,7 @@ const Contact = () => {
             <input
               type='email'
               name='email'
+              placeholder='Enter your email address'
               className='my-2 p-2 bg-transparent border-2 rounded-md focus:outline-none text-white'
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -70,6 +72,7 @@ const Contact = () => {
             ) : null}
             <textarea
               name='message'
+              placeholder='Enter your message'
               rows='10'
               className='p-2 bg-transparent border-2 rounded-md focus:outline-none my-2'
               onChange={formik.handleChange}
