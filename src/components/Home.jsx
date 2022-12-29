@@ -3,6 +3,7 @@ import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { Link } from 'react-scroll';
 import Typed from 'typed.js';
 import React from 'react';
+import Tilt from 'react-parallax-tilt';
 
 const Home = () => {
   // Create reference to store the DOM element containing the animation
@@ -55,12 +56,15 @@ const Home = () => {
             </Link>
           </div>
         </div>
+
         <div className='flex-1'>
-          <img
-            src={HeroImage}
-            alt='my profile'
-            className='rounded-2xl md:w-full mx-auto w-2/3'
-          />
+          <Tilt>
+            <img
+              src={HeroImage}
+              alt='my profile'
+              className='rounded-2xl md:w-full mx-auto w-2/3'
+            />
+          </Tilt>
         </div>
       </div>
     </div>

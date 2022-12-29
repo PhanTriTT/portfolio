@@ -13,6 +13,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
+    "react-parallax-tilt": "^1.7.79",
     "react-scroll": "^1.8.9",
     "typed.js": "^2.0.12",
     "yup": "^0.32.11"
