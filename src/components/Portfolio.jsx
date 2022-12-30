@@ -10,37 +10,37 @@ const Portfolio = () => {
       id: 1,
       src: dashboard,
       demo: 'https://dashboard-shoppy-minhtri.netlify.app/',
-      code: 'https://github.com/PhanTriTT/dashboard-shoppy',
+      code: 'https://github.com/minhtritt01/dashboard-shoppy',
     },
     {
       id: 2,
       src: spotify,
       demo: 'https://spotify-minhtri.netlify.app/',
-      code: 'https://github.com/PhanTriTT/spotify-clone',
+      code: 'https://github.com/minhtritt01/spotify-clone',
     },
     {
       id: 3,
       src: netflix,
       demo: 'https://netflix-minhtri.netlify.app/',
-      code: 'https://github.com/PhanTriTT/netflix-clone',
+      code: 'https://github.com/minhtritt01/netflix-clone',
     },
     {
       id: 4,
       src: web3,
       demo: 'https://kcryptominhtri.000webhostapp.com/',
-      code: 'https://github.com/PhanTriTT/web3.0',
+      code: 'https://github.com/minhtritt01/web3.0',
     },
     {
       id: 5,
       src: rmdb,
       demo: 'https://react-rmdb-minhtri.netlify.app',
-      code: 'https://github.com/PhanTriTT/react-moviedb2021',
+      code: 'https://github.com/minhtritt01/react-moviedb2021',
     },
     {
       id: 6,
       src: cloud,
       demo: 'https://cloud-app-minhtri.netlify.app/',
-      code: 'https://github.com/PhanTriTT/cloud-app-react',
+      code: 'https://github.com/minhtritt01/cloud-app-react',
     },
   ];
   return (
