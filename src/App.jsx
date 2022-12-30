@@ -5,17 +5,44 @@ import Navbar from './components/Navbar';
 import Contact from './components/Contact';
 import Portfolio from './components/Portfolio';
 import SocialLinks from './components/SocialLinks';
+import { useEffect, useState } from 'react';
+import loadinggif from './assets/loading.gif';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    // Loading function to load data or
+    // fake it using setTimeout;
+    const loadData = async () => {
+      // Wait for two second
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
+    };
+
+    loadData();
+  }, [loading]);
   return (
     <div>
-      <Navbar />
-      <Home />
-      <About />
-      <Portfolio />
-      <Experience />
-      <Contact />
-      <SocialLinks />
+      {loading ? (
+        <div className='w-full h-screen flex justify-center items-center bg-gradient-to-b from-black to-gray-800'>
+          <img
+            src={loadinggif}
+            className='w-[150px] h-[150px]'
+            alt='loading-gif'
+          />
+        </div>
+      ) : (
+        <>
+          <Navbar />
+          <Home />
+          <About />
+          <Portfolio />
+          <Experience />
+          <Contact />
+          <SocialLinks />
+        </>
+      )}
     </div>
   );
 }
