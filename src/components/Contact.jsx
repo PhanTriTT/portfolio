@@ -21,7 +21,7 @@ const Contact = () => {
     },
     validationSchema: validationSchema,
   });
-
+  console.log(formik);
   return (
     <div
       name='contact'
@@ -87,7 +87,7 @@ const Contact = () => {
             <button
               type='submit'
               className='text-white bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 my-7 mx-auto flex items-center rounded-md hover:scale-110 duration-300'
-              disabled={!formik.errors}
+              disabled={!formik.isValid || !formik.dirty}
             >
               Let's talk
             </button>

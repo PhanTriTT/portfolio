@@ -5,7 +5,7 @@ import { Link } from 'react-scroll';
 const NavbarItem = ({ title, classProps, handleClick }) => {
   return (
     <li
-      className={`mx-4 cursor-pointer ${classProps} capitalize font-medium text-gray-500 duration-500`}
+      className={`mx-4 cursor-pointer ${classProps} capitalize font-medium text-gray-200 duration-500 hover:scale-110`}
     >
       <Link to={title} smooth duration={500} onClick={handleClick}>
         {title}
