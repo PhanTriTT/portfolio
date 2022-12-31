@@ -7,7 +7,8 @@ import Portfolio from './components/Portfolio';
 import SocialLinks from './components/SocialLinks';
 import { useEffect, useState } from 'react';
 import loadinggif from './assets/loading.gif';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -41,6 +42,7 @@ function App() {
           <Experience />
           <Contact />
           <SocialLinks />
+          <ToastContainer />
         </>
       )}
     </div>

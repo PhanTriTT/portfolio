@@ -1,5 +1,7 @@
 import { useFormik } from 'formik';
 import * as yup from 'yup';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 const validationSchema = yup.object({
   name: yup
     .string('Enter your name')
@@ -21,7 +23,30 @@ const Contact = () => {
     },
     validationSchema: validationSchema,
   });
-  console.log(formik);
+  const onSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post(
+        'https://getform.io/f/c2afd619-c657-49a5-b5ad-1f0683d56d51',
+        {
+          name: formik.values.name,
+          email: formik.values.email,
+          message: formik.values.message,
+        },
+        { headers: { Accept: 'application/json' } }
+      )
+      .then(() =>
+        toast.success('Successful! I will contact you soon !', {
+          position: toast.POSITION.TOP_CENTER,
+        })
+      )
+      .catch(() =>
+        toast.error('Successful! I will contact you soon !', {
+          position: toast.POSITION.TOP_CENTER,
+        })
+      );
+    formik.resetForm();
+  };
   return (
     <div
       name='contact'
@@ -36,11 +61,7 @@ const Contact = () => {
         </div>
 
         <div className='flex justify-center items-center'>
-          <form
-            action='https://getform.io/f/c2afd619-c657-49a5-b5ad-1f0683d56d51'
-            method='POST'
-            className='flex flex-col w-full h-full'
-          >
+          <form onSubmit={onSubmit} className='flex flex-col w-full h-full'>
             <input
               id='name'
               type='text'
@@ -87,7 +108,7 @@ const Contact = () => {
             <button
               type='submit'
               className='text-white bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 my-7 mx-auto flex items-center rounded-md hover:scale-110 duration-300'
-              disabled={!formik.isValid || !formik.dirty}
+              disabled={!formik.dirty || !formik.isValid}
             >
               Let's talk
             </button>
