@@ -23,9 +23,9 @@ const Contact = () => {
     },
     validationSchema: validationSchema,
   });
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    axios
+    await axios
       .post(
         'https://getform.io/f/c2afd619-c657-49a5-b5ad-1f0683d56d51',
         {
