@@ -38,7 +38,7 @@ const About = () => {
               <p className='text-xl w-full flex'>
                 <span className='flex-1'>Address : </span>
                 <span className='flex-1'>
-                  247/33/93 Lac Long Quan,P3,Q11,HCM
+                  247/33/93 Lac Long Quan, P3, Q11, HCM
                 </span>
               </p>
               <p className='text-xl w-full flex'>
