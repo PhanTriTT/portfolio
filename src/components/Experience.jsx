@@ -12,6 +12,7 @@ import formilk from "../assets/formilk.png";
 import flutter from "../assets/flutter.png";
 import bloc from "../assets/bloc.png";
 import riverpod from "../assets/riverpod.png";
+import fibase from "../assets/firebase.png";
 import dart from "../assets/dart.png";
 import axios from "../assets/axios.png";
 import redux from "../assets/redux.png";
@@ -32,7 +33,8 @@ const Experience = () => {
     { id: 13, src: flutter, title: "Flutter", style: "shadow-blue-500" },
     { id: 14, src: bloc, title: "Bloc", style: "shadow-blue-500" },
     { id: 15, src: riverpod, title: "Riverpod", style: "shadow-blue-500" },
-    { id: 16, src: dart, title: "Riverpod", style: "shadow-green-300" },
+    { id: 16, src: dart, title: "Dart", style: "shadow-green-300" },
+    { id: 17, src: fibase, title: "Firebase", style: "shadow-red-300" },
   ];
   return (
     <div
